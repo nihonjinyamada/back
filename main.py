@@ -120,6 +120,7 @@ async def generate_text(request: ModelRequest, db: Session = Depends(get_db)):
         logging.error(f"Error in generate_text: {str(e)}")  
         raise HTTPException(status_code=500, detail={"エラー": "サーバーエラー"})
 
+# 以下入力と出力、削除のエンドポイント   
 @app.post("/training_data/")
 async def create_training_data(data: List[schemas.TrainingDataCreate], db: Session = Depends(get_db)):
     for item in data:
