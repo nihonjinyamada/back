@@ -36,7 +36,7 @@ logging.basicConfig(level=logging.INFO)
 # モデルのロード
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 MODEL_DIR = os.path.join(BASE_DIR, "trained_model")
-DATA_DIR = os.path.join(BASE_DIR, "data")
+DATA_DIR = os.path.join(BASE_DIR, "../data")
 DATA_FILE_PATH = os.path.join(DATA_DIR, "data.json")
 
 if not os.path.exists(MODEL_DIR):
