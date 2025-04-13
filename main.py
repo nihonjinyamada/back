@@ -1,8 +1,7 @@
 import sys
 import os
 
-sys.path.append(os.path.dirname(os.path.abspath(__file__)))
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "composition")))
 
 import json
 import re
@@ -36,7 +35,7 @@ logging.basicConfig(level=logging.INFO)
 # モデルのロード
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 MODEL_DIR = os.path.join(BASE_DIR, "trained_model")
-DATA_DIR = os.path.join(BASE_DIR, "../data")
+DATA_DIR = os.path.join(BASE_DIR, "composition/data")
 DATA_FILE_PATH = os.path.join(DATA_DIR, "data.json")
 
 if not os.path.exists(MODEL_DIR):
